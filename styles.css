@@ -1,0 +1,281 @@
+:root {
+    --primary-color: #FFA500;
+    --text-color: #333;
+    --background-pattern: #FF8C00;
+    --gradient-start: #FFA500;
+    --gradient-end: #FF8C00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    color: var(--text-color);
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+main {
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "FGTS FGTS";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 40px;
+    opacity: 0.1;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-45deg);
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.fgts-text {
+    font-size: 6rem;
+    font-weight: 900;
+    color: white;
+    line-height: 1;
+    margin: 20px 0;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    letter-spacing: 4px;
+}
+
+.hero-text {
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px -20px -60px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.hero-text h2 {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Video Section */
+.video-section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 177.78%; /* 9:16 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Benefits Section */
+.benefits-section {
+    padding: 60px 20px;
+}
+
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 25px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    margin-right: 20px;
+    background: #f8f9fa;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.benefit-content h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.benefit-content p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: white;
+    padding: 20px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+}
+
+.cta-button .emoji {
+    margin-left: 15px;
+    font-size: 1.4rem;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+    border-top: 1px solid #eee;
+}
+
+.logo {
+    max-width: 180px;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (min-width: 1024px) {
+    .container {
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    .fgts-text {
+        font-size: 8rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .fgts-text {
+        font-size: 4rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1rem;
+    }
+
+    .benefits {
+        grid-template-columns: 1fr;
+    }
+
+    .video-section {
+        margin: 10px auto;
+    }
+
+    .benefit-item {
+        padding: 20px;
+    }
+
+    .cta-button {
+        width: 100%;
+        max-width: 300px;
+        padding: 15px 30px;
+    }
+}
